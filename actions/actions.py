@@ -22,6 +22,8 @@ class ActionCustomFallback(Action):
             "inform": "Would you like more information about stroopwafels?"
         }
         buttons = [{'payload': i['name'], 'title': message[i['name']]} for i in intents[:3] if i['name'] in allowed_intents]
-        dispatcher.utter_message(text="It wasn't 100% clear what you meant. Could you speficy/rephrase?")
-        dispatcher.utter_message(buttons = buttons)
+        dispatcher.utter_message(
+            text="It wasn't 100% clear what you meant. Could you speficy/rephrase?",
+            buttons=buttons
+        )
         return []

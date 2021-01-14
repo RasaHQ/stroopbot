@@ -129,3 +129,7 @@ dmypy.json
 .pyre/
 models
 story_graph.dot
+.idea
+*.ipynb
+events.*
+rasa.*
