@@ -28,4 +28,4 @@ class Client:
         domain = {}
 
         slots = self.action.run(dispatcher=dispatcher, tracker=tracker, domain=domain)
-        return dispatcher.messages, slots
+        return dispatcher.messages[0], slots

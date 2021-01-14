@@ -16,8 +16,8 @@ def test_base_usecase():
     action = ActionCustomFallback()
 
     client = Client(action=action)
-    messages, slots = client.invoke_message(message=message)
-    text_msg, button_msg = messages
+    msg_back, slots = client.invoke_message(message=message)
+    print(msg_back)
 
-    assert "Could you speficy/rephrase?" in text_msg["text"]
-    assert len(button_msg['buttons']) == 3
+    assert "Could you speficy/rephrase?" in msg_back["text"]
+    assert len(msg_back['buttons']) == 3

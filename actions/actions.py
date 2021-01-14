@@ -14,7 +14,6 @@ class ActionCustomFallback(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
         intents = [i for i in tracker.current_state()['latest_message']['intent_ranking'] if i['name'] != 'nlu_fallback']
-        print(intents[:5])
         allowed_intents = ["new_order", "what_happened", "inform"]
         message = {
             "new_order": "Do you want to place a new order?",
